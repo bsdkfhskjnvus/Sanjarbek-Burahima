@@ -369,14 +369,15 @@ transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
     </svg>
     <div id="runnerDot" class="runner-dot" aria-hidden="true"></div>
 
-    <div class="clock-mark" data-hour="15"><div class="badge-time">15:00</div><div class="txt">Конокторду тосуу & Сүрөткө түшүү</div></div>
-    <div class="clock-mark" data-hour="16"><div class="badge-time">16:00</div><div class="txt">Ак дасторкондон даам татуу</div></div>
-    <div class="clock-mark" data-hour="17"><div class="badge-time">17:00</div><div class="txt">-Кадырлуу коноктордун куттуктоолору</div></div>
-    <div class="clock-mark" data-hour="18"><div class="badge-time">18:00</div><div class="txt">Кыз узатуу: Салтанаттуу узатуу мүнөттөрү</div></div>
-    <div class="clock-mark" data-hour="19"><div class="badge-time">19:00</div><div class="txt">Үйлөнүү үлпөтү: Тойдун экинчи бөлүгү</div></div>
-    <div class="clock-mark" data-hour="20"><div class="badge-time">20:00</div><div class="txt">Эки жашка ак тилек & Улуулардын батасы</div></div>
-    <div class="clock-mark" data-hour="21"><div class="badge-time">21:00</div><div class="txt">Жаштардын тун бийи & Махабат вальсы</div></div>
-    <div class="clock-mark" data-hour="22"><div class="badge-time">22:00</div><div class="txt">Жаркын эстеликтер & Кеченин жыйынтыгы</div></div>
+   
+<div class="clock-mark" data-hour="17"><div class="badge-time">17:00</div><div class="txt">Конокторду тосуу & Сүрөткө түшүү</div></div>
+<div class="clock-mark" data-hour="18"><div class="badge-time">18:00</div><div class="txt">Үйлөнүү үлпөтүнүн салтанаттуу ачылышы</div></div>
+<div class="clock-mark" data-hour="19"><div class="badge-time">19:00</div><div class="txt">Ак дасторкондон даам татуу & Коноктордун куттуктоолору</div></div>
+<div class="clock-mark" data-hour="20"><div class="badge-time">20:00</div><div class="txt">Эки жашка ак тилек & Улуулардын батасы</div></div>
+<div class="clock-mark" data-hour="21"><div class="badge-time">21:00</div><div class="txt">Жаштардын алгачкы бийи & Махабат вальсы</div></div>
+<div class="clock-mark" data-hour="22"><div class="badge-time">22:00</div><div class="txt">Көңүл ачуу & Бий кечеси</div></div>
+<div class="clock-mark" data-hour="23"><div class="badge-time">23:00</div><div class="txt">Тойдун жыйынтыгы & Конокторду узатуу</div></div>
+
   </div>
 </section>
 
@@ -561,16 +562,15 @@ document.getElementById('y').textContent = new Date().getFullYear();
   const phA = document.getElementById('phA');
   const phB = document.getElementById('phB');
 
-  const seq = [15,16,17,18,19,20,21,22];
+  const seq = [17,18,19,20,21,22,23];
   const PHOTOS = {
-    15:{src:'welcome_guests.jpg', alt:'Конокторду тосуу & Сүрөткө түшүү'},
-    16:{src:'wedding_feast.jpg',   alt:'Ак дасторкондон даам татуу'},
-    17:{src:'wedding_toasts.jpg',  alt:'Кадырлуу коноктордун куттуктоолору'},
-    18:{src:'kyz_uzatuu.jpg',    alt:'Кыз узатуу: Салтанаттуу узатуу мүнөттөрү'},
-    19:{src:'wedding_part2.jpg',    alt:'Үйлөнүү үлпөтү: Тойдун экинчи бөлүгү'},
-    20:{src:'elders_blessing.jpg',     alt:'Эки жашка ак тилек & Улуулардын батасы'},
-    21:{src:'dance.jpg',  alt:'Жаштардын тун бийи & Махабат вальсы'},
-    22:{src:'final.jpg',    alt:'Жаркын эстеликтер & Кеченин жыйынтыгы'}
+17:{src:'welcome_guests.jpg', alt:'Конокторду тосуу & Сүрөткө түшүү'},
+18:{src:'wedding_part2.jpg', alt:'Үйлөнүү үлпөтүнүн салтанаттуу ачылышы'},
+19:{src:'wedding_feast.jpg', alt:'Ак дасторкондон даам татуу & Коноктордун куттуктоолору'},
+20:{src:'elders_blessing.jpg', alt:'Эки жашка ак тилек & Улуулардын батасы'},
+21:{src:'dance.jpg', alt:'Жаштардын алгачкы бийи & Махабат вальсы'},
+22:{src:'wedding_toasts.jpg', alt:'Көңүл ачуу & Бий кечеси'},
+23:{src:'final.jpg', alt:'Тойдун жыйынтыгы & Конокторду узатуу'}
   };
   // Предзагрузка фото
   Object.values(PHOTOS).forEach(({src})=>{ const i=new Image(); i.src=src; });
